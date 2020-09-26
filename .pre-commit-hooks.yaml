@@ -1,5 +1,5 @@
--   id: diff-size-limit
-    name: Diff size limit
-    entry: diff-size-limit
-    language: script
-    require_serial: true
+- id: diff-size-limit
+  name: Diff size limit
+  entry: diff-size-limit
+  language: script
+  require_serial: true

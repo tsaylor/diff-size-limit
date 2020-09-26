@@ -5,8 +5,8 @@ FAIL_THRESHOLD="600"
 
 LINE_COUNT=$(git diff --numstat HEAD..master | cut -f 1,2 | tr "\t" "\n" | paste -sd+ - | bc)
 if [ $LINE_COUNT -gt $FAIL_THRESHOLD ]; then
-    echo "\033[31mError: $LINE_COUNT lines on this branch differ from master. Split it into smaller changes.\033[0m"
-    exit 1
+    echo "\033[31mError: $LINE_COUNT lines on this branch differ from master. Split it into smaller changes.\033[0m"
+    exit 1
 elif [ $LINE_COUNT -gt $WARN_THRESHOLD ]; then
-    echo "\033[33mWarning: $LINE_COUNT lines on this branch differ from master. Consider merging smaller changes.\033[0m"
+    echo "\033[33mWarning: $LINE_COUNT lines on this branch differ from master. Consider merging smaller changes.\033[0m"
 fi
